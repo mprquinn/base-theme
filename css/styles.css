@@ -4,4 +4,7 @@ html {
 *, *::after, *::before {
   box-sizing: inherit; }
 
+.test-component {
+  background: green; }
+
 /*# sourceMappingURL=styles.css.map */

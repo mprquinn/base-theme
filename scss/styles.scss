@@ -3,3 +3,13 @@
 
 @import "bourbon/bourbon";
 @import "neat/neat";
+
+$neat-grid: (
+  columns: 12,
+  gutter: 20px,
+  direction: ltr
+);
+
+// Import components
+@import "components/_test-component";
+
