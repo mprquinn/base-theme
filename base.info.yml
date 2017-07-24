@@ -1,9 +1,9 @@
 name: Base
 type: theme
-description: Base inherits from Classy
+description: Base inherits from Stable
 core: 8.x
 # Defines the base theme
-base theme: classy
+base theme: stable
 # Defines libraries group in which we can add css/js.
 libraries:
   - base/global-styling
