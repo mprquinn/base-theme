@@ -8,13 +8,11 @@ var sourcemaps = require('gulp-sourcemaps');
 var paths = {
   js: 'js/src/**',
   scss: 'scss/**',
-  images: '/images/src/**'
 };
 
 gulp.task('default', function () {
   gulp.watch(paths.scss, gulp.parallel('scss'));
   gulp.watch(paths.js, gulp.parallel('minify_js'));
-  gulp.watch(paths.images, gulp.parallel('minify_images'));
 });
 
 gulp.task('minify_js', function () {
@@ -38,10 +36,4 @@ gulp.task('scss', function () {
       sourceRoot: 'css'
     }))
     .pipe(gulp.dest('css'));
-});
-
-gulp.task('minify_images', function () {
-  return gulp.src('images/src/**')
-    .pipe(imagemin())
-    .pipe(gulp.dest('images/'));
 });

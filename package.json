@@ -12,7 +12,6 @@
     "gulp": "github:gulpjs/gulp#4.0",
     "gulp-autoprefixer": "^4.0.0",
     "gulp-babel-minify": "^0.1.12",
-    "gulp-imagemin": "^3.3.0",
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^1.5.2",
     "gulp-util": "^3.0.8"
