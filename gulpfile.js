@@ -2,7 +2,6 @@ var gulp = require('gulp');
 var gutil = require('gulp-util');
 var sass = require('gulp-sass');
 var minify = require('gulp-babel-minify');
-var imagemin = require('gulp-imagemin');
 var sourcemaps = require('gulp-sourcemaps');
 
 var paths = {

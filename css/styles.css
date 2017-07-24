@@ -1,7 +1,7 @@
-* {
+html {
   box-sizing: border-box; }
 
-body {
-  background: red; }
+*, *::after, *::before {
+  box-sizing: inherit; }
 
 /*# sourceMappingURL=styles.css.map */

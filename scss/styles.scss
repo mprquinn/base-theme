@@ -1,7 +1,5 @@
-* {
-  box-sizing: border-box;
-}
+// Install Bourbon & Bourbon Neat 
 
-body {
-  background: red;
-}
+
+@import "bourbon/bourbon";
+@import "neat/neat";
