@@ -1,0 +1,7 @@
+<?php
+
+  function base_theme_suggestions_block_alter(&$suggestions, $variables) {
+    foreach ($suggestions as &$suggestion) {
+      $suggestion = str_replace('base_', '', $suggestion);
+    }
+  }
