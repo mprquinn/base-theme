@@ -4,4 +4,41 @@ html {
 *, *::after, *::before {
   box-sizing: inherit; }
 
+.book {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto; }
+  .book::after {
+    clear: both;
+    content: "";
+    display: table; }
+
+.book__title {
+  font-family: 'Arial';
+  font-size: 2em;
+  text-transform: uppercase; }
+
+.book__author {
+  font-size: 1.3em;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 1em 0; }
+
+.book__image {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 31.76157%; }
+  .book__image:last-child {
+    margin-right: 0; }
+
+.book__description {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 31.76157%;
+  margin-right: 0; }
+  .book__description:last-child {
+    margin-right: 0; }
+
 /*# sourceMappingURL=styles.css.map */

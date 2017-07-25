@@ -1,0 +1,25 @@
+.book {
+  @include outer-container();
+}
+
+.book__title {
+  font-family: 'Arial';
+  font-size: 2em;
+  text-transform: uppercase;
+}
+
+.book__author {
+  font-size: 1.3em;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 1em 0;
+}
+
+.book__image {
+  @include span-columns(4 of 12); 
+}
+
+.book__description {
+  @include span-columns(4 of 12);
+  @include omega();
+}
