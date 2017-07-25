@@ -5,3 +5,9 @@
       $suggestion = str_replace('base_', '', $suggestion);
     }
   }
+
+  function base_page_attachments(array &$attachments) {
+    // conditions here
+    kint($attachments);
+    $attachments['#attached']['library'][] = 'base/test-module';
+  }

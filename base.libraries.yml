@@ -2,3 +2,13 @@ global-styling:
   css:
     component:
       css/styles.css: {}
+
+  js:
+    js/build/scripts.js: {}
+
+test-module:
+  js:
+    js/build/modules/testModule.js: {}
+
+  dependencies:
+    - core/jquery

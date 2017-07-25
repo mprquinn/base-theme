@@ -7,11 +7,13 @@ var sourcemaps = require('gulp-sourcemaps');
 var paths = {
   js: 'js/src/**',
   scss: 'scss/**',
+  modules: 'js/src/modules/**'
 };
 
 gulp.task('default', function () {
   gulp.watch(paths.scss, gulp.parallel('scss'));
   gulp.watch(paths.js, gulp.parallel('minify_js'));
+  gulp.watch(paths.modules, gulp.parallel('minify_js_modules'));
 });
 
 gulp.task('minify_js', function () {
@@ -23,6 +25,16 @@ gulp.task('minify_js', function () {
       }
     })).pipe(gulp.dest('js/build/'))
 });
+
+gulp.task('minify_js_modules', function () {
+  return gulp.src('js/src/modules/*.js')
+    .pipe(minify({
+      ext: {
+        src: '.js',
+        min: '.js'
+      }
+    })).pipe(gulp.dest('js/build/modules/'))
+})
 
 gulp.task('scss', function () {
   return gulp.src('scss/styles.scss')
