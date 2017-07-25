@@ -1,0 +1,1 @@
+{"version":3,"sources":["scripts.js"],"names":["console","log","init"],"mappings":";;AAAA;;;;;;AAEAA,QAAQC,GAAR,CAAY,MAAZ;;AAEA,qBAAWC,IAAX","file":"scripts.js","sourcesContent":["import TestModule from 'modules/testModule';\n\nconsole.log('test');\n\nTestModule.init();"],"sourceRoot":"/source/"}

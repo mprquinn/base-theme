@@ -6,5 +6,9 @@ global-styling:
   js:
     js/build/scripts.js: {}
 
+test-module:
+  js:
+    js/build/modules/testModule.js: {}
+
   dependencies:
     - core/jquery

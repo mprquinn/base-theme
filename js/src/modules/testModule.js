@@ -1,19 +1,20 @@
-export const testModule = (function ($) {
+var TestModule = (function($) {
   let s;
 
   return {
     settings: {
-
+      message: 'module imported'
     },
 
-    init: function() {
+    init: function () {
       s = this.settings;
       this.bindUI();
     },
 
     bindUI: function () {
-      console.log('imported module');
+      console.log(s.message);
     }
-
   }
-})();
+})(jQuery);
+
+TestModule.init();
