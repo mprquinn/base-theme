@@ -3,7 +3,7 @@ var TestModule = (function($) {
 
   return {
     settings: {
-      message: 'module imported'
+      message: 'this is a new message'
     },
 
     init: function () {
