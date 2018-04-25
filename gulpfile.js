@@ -37,14 +37,17 @@ gulp.task('minify_js_modules', function () {
 })
 
 gulp.task('scss', function () {
-  return gulp.src('scss/styles.scss')
+  return gulp.src('scss/**/*')
     .pipe(sourcemaps.init({
       loadMaps: true,
       identifyMap: true
     }))
-    .pipe(sass())
-    .pipe(sourcemaps.write('.', {
-      sourceRoot: 'css'
+    .pipe(sass({
+      errLogToConsole: true,
+      outputStyle: "compressed"
     }))
-    .pipe(gulp.dest('css'));
+    .pipe(sourcemaps.write('.', {
+      sourceRoot: './scss'
+    }))
+    .pipe(gulp.dest('./css'));
 });

@@ -1,0 +1,30 @@
+<h1>{{ node.title.value }}</h1>
+
+<h2>
+  <!-- custom variable added in preprocess_page -->
+  {{ page.test_mike }}
+</h2>
+
+{{ node.field_subtitle.value }}
+
+
+<section style="background: lightblue;">
+  {{ node.field_banner_rotator.value }}
+</section>
+
+<!-- rendered slider from preprocess_node -->
+
+<!-- this is discouraged, but i dont know a better way yet -->
+{{ node.rotator.value|raw }}
+
+<!-- another way to do it -->
+<!-- {% autoescape false %}
+{{ node.rotator.value }}
+{% endautoescape %} -->
+
+<!-- a better way would probably be through a field template -->
+
+<!-- /slider from preprocess_node -->
+
+{{ page.content }}
+

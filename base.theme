@@ -8,6 +8,35 @@
 
   function base_page_attachments(array &$attachments) {
     // conditions here
-    kint($attachments);
+    dump(get_defined_vars());
     $attachments['#attached']['library'][] = 'base/test-module';
+  }
+
+  function base_preprocess_page(&$variables) {
+    $page = $variables['page'];
+    $variables['page']['test_mike'] = "THIS IS A TEST MESSAGE";
+  }
+
+  function base_preprocess_node(&$variables) {
+    // $node = $variables['node'];
+    $title = $variables['node']->get("title")->value;
+    $slides = $variables['node']->get("field_banner_rotator");
+    
+    if ($slides != null) {
+      $rotator = _generate_slider($slides);
+      $variables['node']->rotator->value = $rotator;
+    }
+  }
+
+  function _generate_slider($slides) {
+    $slider_html = "<ul>";
+    foreach($slides as $slide) {
+      $slide_values = $slide->getValue();
+      $slide_url = file_create_url($slide->entity->getFileUri());
+      $slide_alt = $slide_values['alt'];
+      $slide_title = $slide_values['title'];
+      $slider_html = $slider_html . "<li><img src=\"" . $slide_url . "\" alt=\"" . $slide_alt . "\" /></li>";
+    }
+    $slider_html = $slider_html . "</ul>";
+    return $slider_html;
   }

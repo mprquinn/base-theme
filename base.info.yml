@@ -4,10 +4,12 @@ description: Base inherits from Stable
 core: 8.x
 # Defines the base theme
 base theme: stable
+
 # Defines libraries group in which we can add css/js.
 libraries:
   - base/global-styling
   - base/test-module
+
 # Regions
 regions:
   header: Header
